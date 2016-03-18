@@ -1,0 +1,17 @@
+.project p
+{
+    padding-left: 0;
+}
+
+.project h3
+{
+    display: inline-block;
+    margin-top: 0px;
+    margin-right: 8px;
+}
+
+.project .links
+{
+    float: right;
+    margin: 4px;
+}
