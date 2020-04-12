@@ -1,128 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Ink Applications</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Open Source Project Development">
-        <link href="bootstrap.min.css" rel="stylesheet">
-        <link href="prettyprint-github.css" rel="stylesheet">
-        <link href="theme.css" rel="stylesheet">
-        <link href="projects.css" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-    </head>
-    <body onload="prettyPrint()">
-        <div class="primary-header">
-            <header class="container">
-                <h1>
-                    Ink Applications
-                    <small class="hidden-sm hidden-xs">Open Source Sofware Development</small>
-                </h1>
-            </header>
-        </div>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index,follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <section class="container" id="introduction">
-            <h2>
-                About Us
-                <a href="#about" class="anchor-link">
-                    <img src="link-black.svg" alt="Page Link" />
-                </a>
-            </h2>
+    <title>Ink Applications</title>
+    <link rel="stylesheet" href="https://assets.inkapplications.com/css/main-v1.css" type="text/css" media="all" />
+</head>
+<body>
+    <header>
+        <h1>Ink Applications</h1>
+        <p>
+            Open Source Sofware Development.
+        </p>
+        <ul>
+            <li><a href="https://github.com/InkApplications">GitHub</a></li>
+        </ul>
+    </header>
+    <section>
+        <header>
+            <h1>OSS Projects</h1>
+        </header>
+
+        <article>
+            <h2>Shade</h2>
             <p>
-                Ink Applications creates open source projects and libraries
-                for developers to use and share.
+                A modern SDK for the Philips Hue API written for Kotlin.
             </p>
-            <a href="http://github.com/InkApplications" class="btn btn-lg btn-primary">
-                <img src="octicon-white.svg" alt="gihub-logo" class="icon-md icon-left" />
-                View GitHub
-            </a>
-        </section>
+            <ul>
+                <li><a href="https://shadel.lighting">Website</a></li>
+                <li><a href="https://github.com/inkapplications/shade">GitHub</a></li>
+            </ul>
+        </article>
 
-        <section class="container" id="projects">
-            <h2>
-                Projects
-                <a href="#projects" class="anchor-link">
-                    <img src="link-black.svg" alt="Page Link" />
-                </a>
-            </h2>
-            <h3>Java / Android</h3>
+        <article>
+            <h2>Kimchi</h2>
+            <p>
+                Kotlin Multiplatform Logging and Analytics.
+            </p>
+            <ul>
+                <li><a href="https://github.com/inkapplications/kimchi">GitHub</a></li>
+            </ul>
+        </article>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <article class="project well">
-                        <h4>Simple RecyclerView</h4>
-                        <span class="label label-success">Stable</span>
-                        <span class="label label-success">Maintained</span>
-                        <div class="clearfix" />
-                        <div class="links">
-                            <a href="https://github.com/InkApplications/android-simple-recycler-view" class="btn btn-info">
-                                <img src="octicon-white.svg" alt="View GitHub" class="icon-md" />
-                            </a>
-                        </div>
-                        <p>
-                            A collection of basic implementations for Android's
-                            RecyclerView that allows for easy implementation on the
-                            most simple cases.
-                        </p>
-                    </article>
-                </div>
+        <article>
+            <h2>Backdraft</h2>
+            <p>
+                Kotlin Coroutine Flows for Firebase.
+            </p>
+            <ul>
+                <li>Experimental</li>
+                <li><a href="https://github.com/inkapplications/Backdraft">GitHub</a></li>
+            </ul>
+        </article>
 
-                <div class="col-md-6">
-                    <article class="project well">
-                        <h4>Ground Control</h4>
-                        <span class="label label-danger">Experimental</span>
-                        <div class="clearfix" />
-                        <div class="links">
-                            <a href="https://github.com/InkApplications/ground-control" class="btn btn-info">
-                                <img src="octicon-white.svg" alt="View GitHub" class="icon-md" />
-                            </a>
-                        </div>
-                        <p>A collection of RxJava and SQLite synchronization utilities for Android.</p>
-                    </article>
-                </div>
-            </div>
-
-            <h3>PHP</h3>
-            <div class="row">
-                <div class="col-md-6">
-                    <article class="project well">
-                        <h4>Haphazard</h4>
-                        <span class="label label-success">Stable</span>
-                        <span class="label label-warning">Not Maintained</span>
-                        <div class="clearfix" />
-                        <div class="links">
-                            <a href="https://inkapplications.github.io/haphazard/" class="btn btn-info">
-                                <img src="web-white.svg" alt="View Website" class="icon-md" />
-                            </a>
-                            <a href="https://github.com/InkApplications/haphazard" class="btn btn-info">
-                                <img src="octicon-white.svg" alt="View GitHub" class="icon-md" />
-                            </a>
-                        </div>
-                        <p>
-                            Quick and Dirty functional testing for Symfony2.
-                        </p>
-                    </article>
-                </div>
-                <div class="col-md-6">
-                    <article class="project well">
-                        <h4>StripperClip</h4>
-                        <span class="label label-danger">Experimental</span>
-                        <div class="clearfix" />
-                        <div class="links">
-                            <a href="https://github.com/InkApplications/stripperclip" class="btn btn-info">
-                                <img src="octicon-white.svg" alt="View GitHub" class="icon-md" />
-                            </a>
-                        </div>
-                        <p>An automatic task runner for the people</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <footer class="container primary-footer">
-            <img src="code-black.svg" class="icon-md" /> Ink Applications
-        </footer>
-        <script src="prettify.js"></script>
-    </body>
+        <article>
+            <h2>DriveChain</h2>
+            <p>
+                A Lightweight Framework for Android Libraries.
+            </p>
+            <ul>
+                <li><a href="https://drivechain.inkapplications.com">Website</a></li>
+                <li><a href="https://github.com/inkapplications/DriveChain">GitHub</a></li>
+            </ul>
+        </article>
+    </section>
+</body>
 </html>
