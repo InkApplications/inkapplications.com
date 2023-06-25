@@ -1,0 +1,49 @@
+@import url("https://assets.inkapplications.com/css/main-v1.1.css");
+
+body
+{
+    padding-top: 0;
+}
+body > header
+{
+    padding-top: .25rem;
+    padding-left: 150px;
+    background-image: url('tentacle-bg-transluscent.svg');
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: top -20px left;
+    min-height: 270px;
+}
+body > header > nav a:before
+{
+    content: '[';
+}
+body > header > nav a:after
+{
+    content: ']';
+}
+body > header > h1
+{
+    letter-spacing: .25rem;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body > header
+    {
+        background-image: url('tentacle-bg-surface.svg');
+    }
+}
+@media(max-width: 500px) {
+    body > header
+    {
+        padding-left: 0;
+        padding-top: 70px;
+        background-size: 50px;
+        background-position: top center;
+        min-height: 270px;
+        text-align: center;
+    }
+}
