@@ -1,0 +1,32 @@
+name: Release Site
+on:
+    push:
+        branches: [master]
+jobs:
+    publish-site:
+        name: Publish Site
+        runs-on: ubuntu-latest
+        permissions:
+            id-token: write
+            pages: write
+        steps:
+            -
+                name: Checkout
+                uses: actions/checkout@v4.2.2
+            -
+                name: Configure Java
+                uses: actions/setup-java@v4.7.1
+                with:
+                    java-version: 23
+                    distribution: temurin
+            -
+                name: Build Static Sample
+                run: bin/build
+            -
+                name: Upload Pages Artifact
+                uses: actions/upload-pages-artifact@v3.0.1
+                with:
+                    path: build/dist
+            -
+                name: Deploy to GitHub Pages
+                uses: actions/deploy-pages@v4.0.5
