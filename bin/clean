@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+DIR_BIN="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROJECT_DIR="$DIR_BIN/.."
+rm -rf "$PROJECT_DIR/build"
