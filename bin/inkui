@@ -6,19 +6,34 @@ SHA256=515a4d3bc20893d0162ea0de5bb3001c103c8b14f4d73af875bd983ea245c6fe
 INSTALL_DIR="$HOME/.local/share/inkui"
 INKUI_BIN="$HOME/.local/share/inkui/${VERSION}/bin/inkui"
 
+QUIET=0
+if [ "$1" == "-q" ]; then
+    QUIET=1
+    shift
+fi
+setupCommand() {
+    if [ $QUIET -eq 1 ]; then
+        "$@" > /dev/null 2>&1
+    else
+        "$@"
+    fi
+}
+
 if [ ! -f "$INKUI_BIN" ]; then
-    echo "Downloading inkui..."
+    if [ $QUIET -eq 0 ]; then
+        echo "Downloading inkui..."
+    fi
     TEMP_FOLDER=$(mktemp -d)
     ZIP_FILE="${TEMP_FOLDER}/inkui.zip"
-    curl -L "$URL" -o "$ZIP_FILE"
-    echo "$SHA256 $ZIP_FILE" | sha256sum -c -
+    setupCommand curl -L "$URL" -o "$ZIP_FILE"
+    echo "$SHA256 $ZIP_FILE" | sha256sum -c - > /dev/null 2>&1
     if [ $? -ne 0 ]; then
         echo "Checksum verification failed!"
         exit 1
     fi
-    mkdir -p "$INSTALL_DIR"
-    unzip "$ZIP_FILE" -d "${INSTALL_DIR}"
-    mv "${INSTALL_DIR}/inkui-${VERSION}" "${INSTALL_DIR}/${VERSION}"
+    setupCommand mkdir -p "$INSTALL_DIR"
+    setupCommand unzip "$ZIP_FILE" -d "${INSTALL_DIR}"
+    setupCommand mv "${INSTALL_DIR}/inkui-${VERSION}" "${INSTALL_DIR}/${VERSION}"
 fi
 
 "$INKUI_BIN" $@
