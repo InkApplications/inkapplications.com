@@ -11,7 +11,7 @@ mkdir -p "$OUT_DIR"
 for f in "$SRC_DIR"/*.inkui.kts; do
     echo "Building: $f"
     out="$OUT_DIR/$(basename "${f%.inkui.kts}.html")"
-    "$BIN_DIR/inkui -q" "$f" > "$out" || exit $?
+    "$BIN_DIR/inkui" -q "$f" > "$out" || exit $?
 done
 
 cp $SRC_DIR/*.css $OUT_DIR
