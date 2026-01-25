@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-VERSION=1.5.1
+VERSION=1.5.2
 URL=https://github.com/InkApplications/ink-ui/releases/download/${VERSION}/inkui-${VERSION}.zip
-SHA256=515a4d3bc20893d0162ea0de5bb3001c103c8b14f4d73af875bd983ea245c6fe
+SHA256=978d6be13c6ead5f1f5429417f4d798872b135c4a9650fd00f020cffbb76b8b9
 INSTALL_DIR="$HOME/.local/share/inkui"
 INKUI_BIN="$HOME/.local/share/inkui/${VERSION}/bin/inkui"
 
