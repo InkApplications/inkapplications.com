@@ -13,105 +13,49 @@ setHeader(
 setBody(
     ScrollingListLayout(
         inline(
-            TextElement("Open Source Projects", TextStyle.H1),
-            TextElement("""
-                This organization is for making things. Libraries, extensions
-                and apps. Everything here is open source and open to 
-                contributions.
-            """.trimIndent()),
-
-            TextElement("Full SDKs and Apps", TextStyle.H2),
-            project(
-                name = "\uD83D\uDCA1 Shade",
-                description = "A modern SDK for the Philips Hue API written for Kotlin.",
-                links = listOf(
-                    "Website" to "https://shade.lighting",
-                    "GitHub" to "https://github.com/inkapplications/shade",
-                ),
-            ),
-            project(
-                name = "\uD83D\uDCFB Ack",
-                description = "APRS Client for Kotlin.",
-                links = listOf(
-                    "Website" to "https://ack.inkapplications.com",
-                    "GitHub" to "https://github.com/inkapplications/ack",
-                    "Play Store" to "https://play.google.com/store/apps/details?id=com.inkapplications.ack.android"
-                ),
-            ),
-
-            TextElement("Kotlin Multiplatform Utilities", TextStyle.H2),
-            project(
-                name = "\uD83E\uDD6C Kimchi",
-                description = "Kotlin Multiplatform Logging and Analytics.",
-                links = listOf(
-                    "Website" to "https://kimchi.inkapplications.com/",
-                    "GitHub" to "https://github.com/inkapplications/Kimchi",
-                ),
-            ),
-            project(
-                name = "\uD83E\uDEA8 Regolith",
-                description = "General purpose application interfaces.",
-                links = listOf(
-                    "GitHub" to "https://github.com/inkapplications/Regolith",
-                ),
-            ),
-            project(
-                name = "\uD83D\uDCD0 Spondee",
-                description = "A class set for wrapping units of measure and common data types in Kotlin applications.",
-                links = listOf(
-                    "GitHub" to "https://github.com/inkapplications/Spondee",
-                ),
-            ),
-            project(
-                name = "\uD83C\uDF49 Watermelon",
-                description = "Multiplatform Kotlin extensions.",
-                links = listOf(
-                    "GitHub" to "https://github.com/inkapplications/Watermelon",
-                ),
-            ),
-
-            TextElement("Experimental Projects", TextStyle.H2),
-            TextElement("Projects that may be unstable or incomplete but are under active development."),
-            project(
-                name = "\uD83E\uDE9F Glass",
-                description = "A dumb display server for repurposing old Android devices as IoT controllers.",
-                links = listOf(
-                    "GitHub" to "https://github.com/inkapplications/Glass",
-                ),
-            ),
-        ),
-        inline(
-            TextElement("Made by Humans", TextStyle.H1),
+            TextElement("We don't need software to tell us we're lost", TextStyle.H1),
             FormattedText {
-                text("Ink Applications is an organization run by ")
-                link("https://ReneeVandervelde.com") {
-                    text("Renee Vandervelde")
+                text("As of August 2026, Ink Applications is on an")
+                space()
+                strong {
+                    text("indefinite hiatus")
                 }
-                text(", focused on meticulous API design with strong intent.")
+                text(".")
             },
             TextElement("""
-                The software here is designed by humans, for humans, not generated
-                by AI tools.
-                While AI can be useful during the development process,
-                overuse can often degrade the design of a project over time.
-                The projects here are for the long haul, so you won't find
-                fully generated code or documentation here.
+                With so many engineers using AI to generate slop instead of
+                engineering code, there hasn't been any real reward in keeping
+                software libraries open source. This pains me deeply, but I
+                just don't get any enjoyment out of uploading code publicly 
+                to be stolen en masse. So I'm just not doing it anymore; 
+                there's no point.
             """.trimIndent()),
+
+            TextElement("Later, tater", TextStyle.H2),
+            FormattedText {
+                text("""
+                    These projects live on in my own private repositories.
+                    I continue to enjoy engineering coding projects and software
+                    libraires. I'm simply no longer working in public.
+                """.trimIndent())
+            },
+            FormattedText {
+                text("""
+                    You can learn more about me or contact me at my
+                """.trimIndent())
+                space()
+                link("https://reneevandervelde.com") {
+                    text("personal website")
+                }
+                text(". ")
+            },
+            FormattedText {
+                text("\u00a0\u00a0\u00a0\u00a0")
+                emphasis {
+                    text("-- Renee Vandervelde")
+                }
+            }
         ),
         groupingStyle = GroupingStyle.Sections,
     )
-)
-
-fun project(
-    name: String,
-    description: String,
-    links: List<Pair<String, String>>
-) = inline(
-    TextElement(name, TextStyle.H3),
-    TextElement(description),
-    LinkNavigation {
-        links.forEach { (text, url) ->
-            link(text, url)
-        }
-    }
 )
